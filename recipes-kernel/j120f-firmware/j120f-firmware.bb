@@ -38,10 +38,10 @@ FILES_${PN} += " \
     ${base_libdir}/firmware/es305_fw.bin \
     ${base_libdir}/firmware/es305_fw_bypass.bin \
     ${base_libdir}/firmware/mfc_fw.bin \
-    ${base_libdir}/wifi/bcmdhd_apsta.bin \
-    ${base_libdir}/wifi/bcmdhd_mfg.bin \
-    ${base_libdir}/wifi/cred.conf \
-    ${base_libdir}/wifi/nvram_mfg.txt \
-    ${base_libdir}/wifi/p2p_supplicant_overlay.conf \
-    ${base_libdir}/wifi/wpa_supplicant.conf \
+    ${sysconfdir}/wifi/bcmdhd_apsta.bin \
+    ${sysconfdir}/wifi/bcmdhd_mfg.bin \
+    ${sysconfdir}/wifi/cred.conf \
+    ${sysconfdir}/wifi/nvram_mfg.txt \
+    ${sysconfdir}/wifi/p2p_supplicant_overlay.conf \
+    ${sysconfdir}/wifi/wpa_supplicant.conf \
 "
