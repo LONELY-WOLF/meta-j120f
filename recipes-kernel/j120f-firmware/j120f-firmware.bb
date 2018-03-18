@@ -11,10 +11,13 @@ SRC_URI += " \
     file://firmware/mfc_fw.bin \
     file://wifi/bcmdhd_apsta.bin \
     file://wifi/bcmdhd_mfg.bin \
+    file://wifi/bcmdhd_sta.bin \
     file://wifi/cred.conf \
     file://wifi/nvram_mfg.txt \
+    file://wifi/nvram_net.txt \
     file://wifi/p2p_supplicant_overlay.conf \
     file://wifi/wpa_supplicant.conf \
+    file://wifi/wpa_supplicant_overlay.conf \
 "
 S = "${WORKDIR}"
 
@@ -27,10 +30,13 @@ do_install () {
     install -d ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/bcmdhd_apsta.bin ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/bcmdhd_mfg.bin ${D}${sysconfdir}/wifi/
+    install -m 755 ${S}/wifi/bcmdhd_sta.bin ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/cred.conf ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/nvram_mfg.txt ${D}${sysconfdir}/wifi/
+    install -m 755 ${S}/wifi/nvram_net.txt ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/p2p_supplicant_overlay.conf ${D}${sysconfdir}/wifi/
     install -m 755 ${S}/wifi/wpa_supplicant.conf ${D}${sysconfdir}/wifi/
+    install -m 755 ${S}/wifi/wpa_supplicant_overlay.conf ${D}${sysconfdir}/wifi/
 }
 
 FILES_${PN} += " \
@@ -40,8 +46,11 @@ FILES_${PN} += " \
     ${base_libdir}/firmware/mfc_fw.bin \
     ${sysconfdir}/wifi/bcmdhd_apsta.bin \
     ${sysconfdir}/wifi/bcmdhd_mfg.bin \
+    ${sysconfdir}/wifi/bcmdhd_sta.bin \
     ${sysconfdir}/wifi/cred.conf \
     ${sysconfdir}/wifi/nvram_mfg.txt \
+    ${sysconfdir}/wifi/nvram_net.txt \
     ${sysconfdir}/wifi/p2p_supplicant_overlay.conf \
     ${sysconfdir}/wifi/wpa_supplicant.conf \
+    ${sysconfdir}/wifi/wpa_supplicant_overlay.conf \
 "
